@@ -14,7 +14,6 @@ export default class TasksContainer {
     this.element.classList.add('tasks-container');
 
     const header = document.createElement('h2');
-    console.log(this.taskTitle);
     header.textContent = this.taskTitle;
     this.element.appendChild(header);
 
@@ -29,7 +28,6 @@ export default class TasksContainer {
       this.tasksContainer.textContent = this.noTasksMessage;
     }
     elements.forEach((item) => {
-      console.log(item);
       this.tasksContainer.appendChild(item.element);
     });
   }

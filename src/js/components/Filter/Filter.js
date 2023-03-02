@@ -1,3 +1,5 @@
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
+
 export default class Filter {
   constructor(name, pinnedBlock, tasksBlock, tasks) {
     this.element = null;
@@ -34,6 +36,8 @@ export default class Filter {
     event.preventDefault();
 
     if (this.inputEl.value.length === 0) {
+      const errmsg = new ErrorMessage('.app', 'Empty task');
+      errmsg.show();
       return;
     }
 
