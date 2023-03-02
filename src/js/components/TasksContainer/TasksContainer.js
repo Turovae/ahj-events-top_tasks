@@ -1,3 +1,5 @@
+import './TasksContainer.css';
+
 export default class TasksContainer {
   constructor() {
     this.element = null;
@@ -25,7 +27,7 @@ export default class TasksContainer {
   draw(elements) {
     this.tasksContainer.innerHTML = '';
     if (elements.length === 0) {
-      this.tasksContainer.textContent = this.noTasksMessage;
+      this.tasksContainer.innerHTML = `<p>${this.noTasksMessage}</p>`;
     }
     elements.forEach((item) => {
       this.tasksContainer.appendChild(item.element);

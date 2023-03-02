@@ -1,3 +1,5 @@
+import './ErrorMessage.css';
+
 export default class ErrorMessage {
   constructor(container, message) {
     this.container = document.querySelector(container);
@@ -17,7 +19,11 @@ export default class ErrorMessage {
     this.container.insertAdjacentElement('afterbegin', errEl);
 
     setTimeout(() => {
+      errEl.style.top = '-40px';
+    }, 600);
+
+    setTimeout(() => {
       errEl.remove();
-    }, 1500);
+    }, 1000);
   }
 }

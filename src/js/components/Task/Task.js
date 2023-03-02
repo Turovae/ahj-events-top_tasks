@@ -1,3 +1,5 @@
+import './Task.css';
+
 export default class Task {
   constructor(taskName) {
     this.name = taskName;

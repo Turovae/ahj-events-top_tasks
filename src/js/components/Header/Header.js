@@ -1,3 +1,5 @@
+import './Header.css';
+
 export default class Header {
   constructor(text) {
     this.element = null;

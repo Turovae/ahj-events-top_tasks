@@ -1,0 +1,11 @@
+.error-message {
+  display: block;
+  position: absolute;
+  top: 0;
+  padding: 10px 30px;
+  opacity: .9;
+  /* border: 1px solid gray; */
+  background-color: greenyellow;
+  border-radius: 0 0 10px 10px;
+  transition: top .4s;
+}

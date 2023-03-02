@@ -1,3 +1,4 @@
+import './Filter.css';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
 export default class Filter {
@@ -9,8 +10,6 @@ export default class Filter {
     this.pinnedBlock = pinnedBlock;
     this.tasksBlock = tasksBlock;
     this.tasks = tasks;
-    this.tasks.add('Поздороваться');
-    this.tasks.add('Покушать');
     this.pinnedBlock.draw(this.tasks.pinnedTasks());
     this.tasksBlock.draw(this.tasks.notPinnedTasks());
 
@@ -25,9 +24,11 @@ export default class Filter {
     this.element = document.createElement('form');
     this.element.name = this.name;
     this.element.addEventListener('submit', this.addTask);
+    this.element.classList.add('task-control');
     document.documentElement.addEventListener('change', this.changePin);
 
     this.inputEl = document.createElement('input');
+    this.inputEl.classList.add('task-control-input');
     this.element.appendChild(this.inputEl);
     this.inputEl.addEventListener('input', this.filterTasks);
   }
@@ -36,7 +37,7 @@ export default class Filter {
     event.preventDefault();
 
     if (this.inputEl.value.length === 0) {
-      const errmsg = new ErrorMessage('.app', 'Empty task');
+      const errmsg = new ErrorMessage('.app', 'Error! Empty task');
       errmsg.show();
       return;
     }

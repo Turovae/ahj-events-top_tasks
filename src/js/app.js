@@ -6,6 +6,10 @@ import PinnedTasks from './components/PinnedTasks/PinnedTasks';
 
 const tasks = new Tasks();
 
+tasks.add('Проснуться');
+tasks.add('Позавтракать');
+tasks.add('Взломать сайт Пентагона');
+
 const allTasks = new AllTasks();
 const pinnedTasks = new PinnedTasks();
 
