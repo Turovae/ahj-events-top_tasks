@@ -1,3 +1,8 @@
+[![TOP Tasks](https://github.com/Turovae/ahj-events-top_tasks/actions/workflows/web.yml/badge.svg)](https://github.com/Turovae/ahj-events-top_tasks/actions/workflows/web.yml)
+[![Build status](https://ci.appveyor.com/api/projects/status/a3xw15dtkgdc1wfk?svg=true)](https://ci.appveyor.com/project/Turovae/ahj-events-top-tasks)
+
+---
+
 # Домашнее задание к занятию "3.Обработка событий"
 
 Правила сдачи задания:
